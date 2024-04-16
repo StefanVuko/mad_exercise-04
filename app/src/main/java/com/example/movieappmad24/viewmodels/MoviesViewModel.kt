@@ -18,5 +18,9 @@ class MoviesViewModel : ViewModel() {
         movie.isFavorite = !movie.isFavorite
     }
 
+    fun getMovieById(movieId: String): Movie? {
+        return _movies.find { it.id == movieId }
+    }
+
     // rest of logic
 }
